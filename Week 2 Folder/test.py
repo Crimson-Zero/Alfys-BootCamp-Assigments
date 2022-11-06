@@ -56,4 +56,6 @@ assert vectors_list_sum([[1, 1, 1], [1, 0, 0], [0, 0, 100]]) == [2, 1, 101]
 
 assert vectors_list_sum([[1, 1, 1, 1, 1], [1, 1, 1, 1, 1]]) == [2, 2, 2, 2, 2]
 
+
+
 print("All tests passed")
