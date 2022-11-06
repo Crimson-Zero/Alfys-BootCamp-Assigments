@@ -1,0 +1,1 @@
+print("This is my first Commit via git terminal week 2 assigmnet one Monday")
