@@ -64,8 +64,24 @@ def primes_generator(get_number_of_primes):
     result = prime[:get_number_of_primes]
     return result
                 
-print(primes_generator(50))
-    
+def is_empty_vector(vec_lst):
+    if len(vec_lst) == 0:
+        return True
+    else:
+        return False
 
-            
+def vectors_list_sum(vec_lst1):
     
+    output = []
+    for column in zip(*vec_lst1):
+        result = 0
+        for item in column:
+            result = result + item
+        output.append(result)
+        
+        print(column)
+    
+    #result = [sum(col) for col in zip(*vec_lst1)]
+    return output
+
+
