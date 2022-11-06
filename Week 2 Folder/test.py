@@ -31,6 +31,19 @@ assert calc_the_inner_product([], [1]) is None
 assert calc_the_inner_product([], []) == 0
 
 
+########################
+#         A. 5         #
+########################
+
+assert primes_generator(0) == []
+assert primes_generator(1) == [2]
+assert primes_generator(2) == [2, 3]
+assert primes_generator(7) == [2, 3, 5, 7, 11, 13, 17]
+assert primes_generator(50) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+                                41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83,
+                                89, 97, 101, 103, 107, 109, 113, 127, 131,
+                                137, 139, 149, 151, 157, 163, 167, 173, 179,
+                                181, 191, 193, 197, 199, 211, 223, 227, 229]
 
 
 

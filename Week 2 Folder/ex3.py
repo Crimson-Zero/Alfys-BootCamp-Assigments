@@ -41,9 +41,30 @@ def calc_the_inner_product(list1,list2):
     
     return sum
         
+def is_prime(n):
+    status = True
+    if n < 2:
+        status = False
+    else:
+        for i in range(2,n):
+            if n % i == 0:
+                status = False
+    return status
 
+
+def primes_generator(get_number_of_primes):
     
+    prime = []
+    if get_number_of_primes == 0:
+        return []
+    for number in range(2,300):
+        if is_prime(number):
+            prime.append(number)
     
+    result = prime[:get_number_of_primes]
+    return result
+                
+print(primes_generator(50))
     
 
             
