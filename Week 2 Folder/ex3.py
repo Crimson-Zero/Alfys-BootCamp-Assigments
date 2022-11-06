@@ -57,7 +57,7 @@ def primes_generator(get_number_of_primes):
     prime = []
     if get_number_of_primes == 0:
         return []
-    for number in range(2,300):
+    for number in range(2,1000):
         if is_prime(number):
             prime.append(number)
     
