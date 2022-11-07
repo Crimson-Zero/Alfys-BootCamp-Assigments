@@ -81,5 +81,12 @@ def vectors_list_sum(vec_lst1):
     #result = [sum(col) for col in zip(*vec_lst1)]
     return output
 
-
+def orthogonal_number(vector_list):
+    orth_number = 0
+    for i in range(len(vector_list)):
+        for j in range(i+1,len(vector_list)):
+            if calc_the_inner_product(vector_list[i],vector_list[j]) == 0:
+                orth_number +=1
+    
+    return orth_number
     

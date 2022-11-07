@@ -56,6 +56,22 @@ assert vectors_list_sum([[1, 1, 1], [1, 0, 0], [0, 0, 100]]) == [2, 1, 101]
 
 assert vectors_list_sum([[1, 1, 1, 1, 1], [1, 1, 1, 1, 1]]) == [2, 2, 2, 2, 2]
 
+########################
+#         A. 7         #
+########################
 
+assert orthogonal_number([[1, 0, 0], [0, 1, 0], [0, 0, 1]]) == 3
+
+assert orthogonal_number([[0, 0, 0], [0, 1, 0], [0, 0, 1]]) == 3
+
+assert orthogonal_number([[0, 0], [1, 2], [10, 5]]) == 2
+
+assert orthogonal_number([[1, 1, 1, 1],
+                          [2, 1, 3, 3],
+                          [0, 0, 100, 33],
+                          [8, 8, 8, 1.5],
+                          [9, 9, 9, 9]]) == 0
+
+assert orthogonal_number([[0], [0], [0], [0]]) == 6
 
 print("All tests passed")
