@@ -30,6 +30,39 @@ assert calc_the_inner_product([-10], [-5]) == 50
 assert calc_the_inner_product([], [1]) is None
 assert calc_the_inner_product([], []) == 0
 
+########################
+#         A. 3         #
+########################
+
+assert (check_monotonic_sequence([1, 2, 3, 4, 5, 6, 7, 8])
+        == [True, True, False, False])
+
+assert (check_monotonic_sequence([1, 2, 2, 3])
+        == [True, False, False, False])
+
+assert (check_monotonic_sequence([1, 1, 1, 1])
+        == [True, False, True, False])
+
+assert (check_monotonic_sequence([3, 2, 1, 1])
+        == [False, False, True, False])
+
+assert (check_monotonic_sequence([7.5, 4, 3.141, 0.111])
+        == [False, False, True, True])
+
+assert (check_monotonic_sequence([1, 0, -1, 1])
+        == [False, False, False, False])
+
+assert (check_monotonic_sequence([])
+        == [True, True, True, True])
+
+assert (check_monotonic_sequence([100])
+        == [True, True, True, True])
+
+assert (check_monotonic_sequence([-10])
+        == [True, True, True, True])
+
+assert (check_monotonic_sequence([0])
+        == [True, True, True, True])
 
 ########################
 #         A. 5         #

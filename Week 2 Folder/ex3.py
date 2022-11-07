@@ -40,7 +40,34 @@ def calc_the_inner_product(list1,list2):
             sum = sum + product
     
     return sum
+
+def check_monotonic_sequence(seq_list):
+    
+    seq_copy = []
+    for item in seq_list:
+        seq_copy.append(item)
+    
+    seq_copy.sort()
+    bool_list = [False,False,False,False]
+    if seq_copy == seq_list:
+        bool_list[0] = True
+        bool_list[1] = True
         
+        for i in range(1,len(seq_copy)):
+            if seq_copy[i-1] == seq_copy[i]:
+                bool_list[1] = False
+                break
+    
+    seq_copy.reverse()
+    if seq_copy == seq_list:
+        bool_list[2] =True
+        bool_list[3] = True
+        for i in range(1,len(seq_copy)):
+            if seq_copy[i-1] == seq_copy[i]:
+                bool_list[3] =False
+                break
+    
+    return bool_list
 def is_prime(n):
     status = True
     if n < 2:
