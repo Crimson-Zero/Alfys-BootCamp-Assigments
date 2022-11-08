@@ -65,6 +65,49 @@ assert (check_monotonic_sequence([0])
         == [True, True, True, True])
 
 ########################
+#         A. 4         #
+########################
+
+bool_def = [True, True, False, False]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [False, False, True, True]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [True, False, True, False]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [True, False, False, False]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [False, False, True, False]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [False, False, False, False]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+
+bool_def = [True, True, True, True]
+assert check_monotonic_sequence(check_monotonic_sequence_inverse(bool_def)) == bool_def
+assert len(check_monotonic_sequence_inverse(bool_def)) <= 1
+
+
+bool_def = [False, True, False, False]
+assert check_monotonic_sequence_inverse(bool_def) is None
+
+bool_def = [False, False, False, True]
+assert check_monotonic_sequence_inverse(bool_def) is None
+
+
+
+
+bool_def = [False, True, True, False]
+assert check_monotonic_sequence_inverse(bool_def) is None
+
+bool_def = [True, False, False, True]
+assert check_monotonic_sequence_inverse(bool_def) is None
+
+
+########################
 #         A. 5         #
 ########################
 

@@ -68,6 +68,26 @@ def check_monotonic_sequence(seq_list):
                 break
     
     return bool_list
+
+def check_monotonic_sequence_inverse(sequence):
+    
+        if sequence == [True, True, True, True]:
+            return [1]
+        elif sequence == [False, False, False, False]:
+            return [1, -1, 1]
+        elif sequence == [True, True, False, False]:
+            return [1, 2, 3]
+        elif sequence == [True, False, False, False]:
+            return [1, 1, 2]
+        elif sequence == [False, False, True, False]:
+            return [2, 1, 1]
+        elif sequence == [False, False, True, True]:
+            return [3, 2, 1]
+        elif sequence ==  [True, False, True, False]:
+            return [1, 1, 1]
+        else:
+            return None
+        
 def is_prime(n):
     status = True
     if n < 2:
