@@ -123,7 +123,6 @@ def vectors_list_sum(vec_lst1):
             result = result + item
         output.append(result)
         
-        print(column)
     
     #result = [sum(col) for col in zip(*vec_lst1)]
     return output
