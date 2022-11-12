@@ -47,7 +47,7 @@ def draw_hang_man(user,word,blank,counter):
     
     
     if(counter==6):
-        print("Sorry you did not guess the word correctly")
+        print(f"Sorry you did not guess the word correctly the correct word was {word}")
         print(stages[counter])
         return(counter)
     
