@@ -3,7 +3,7 @@ import random
 from hang_man_init import logo
 from hang_man_init import stages
 
-
+wrong_list = []
 
 def load_words(file='words.txt'):
 
@@ -34,13 +34,15 @@ def get_word_blanklist(word):
 
 def draw_hang_man(user,word,blank,counter):
     
-    
+    global wrong_list
     for index,letter in enumerate(word):
         if(user==letter):
             blank[index]=user
             
     if(word.find(user)==-1):
+        wrong_list.append(user)
         print(stages[counter])
+        print(wrong_list)
         counter+=1
     
     
